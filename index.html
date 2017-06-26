@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+	<!--<meta name="keywords" content=""/>-->
+	<!--<meta name="description" content=""/>-->
+	<!--<meta name="viewport" content="width = 1050, user-scalable = yes" />-->
+<title>fullPage.js — 绑定菜单演示_dowebok</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">-->
+	<link rel="stylesheet" href="css/爱奇艺.css">
+	<link rel="stylesheet" href="css/tx.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/爱奇艺.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery.min.1.7.js"></script>-->
+	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script src="js/basicmessage.js"></script>
+	<script>
+		$(function(){
+			$("#sanjiao1").click(function(){
+				if( $(".navMid_hiddenfix").css({display:"none"})){
+					$(".navMid_hiddenfix").css({display:"block"})
+				}else{
+					$(".navMid_hiddenfix").css({display:"none"})
+				}
+			})
+			$(".focus_open img").hover(function(){
+				var index=$(this).index()
+				$(".focus_list img").eq(index).fadeIn(1000).siblings().fadeOut(0)
+			})
+		})
+	</script>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="js/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/basicmessage.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+#menu .active a { color: #fff; background-color: #333;}
+.a1{
+	width: 440px;
+	height: 100%;
+	margin: 0 auto;
+}
+img{
+	transition: all 2s ease 0s;
+}
+.a1 :nth-child(9){
+	transform:  translate(340px,30px) rotate(40deg);
+}
+.a1 :nth-child(1){
+	transform:  translate(280px) rotate(340deg);
+}
+.a1 :nth-child(2){
+	transform:  translate(330px) rotate(140deg);
+}
+.a1 :nth-child(3){
+	transform:  translate(50px) rotate(140deg);
+}
+.a1 :nth-child(4){
+	transform:  translate(40px) rotate(140deg);
+}
+.a1 :nth-child(5){
+	transform:  translate(230px) rotate(140deg);
+}
+.a1 :nth-child(6){
+	transform:  translate(230px) rotate(140deg);
+}
+.a1 :nth-child(7){
+	transform:  translate(-330px) rotate(140deg);
+}
+.a1 :nth-child(8){
+	transform:  translate(430px) rotate(140deg);
+}
+/*.a1:hover img{*/
+/*transform:  translate(0) rotate(0);*/
+/*}*/
+.img1{
+	position: absolute;
+	opacity: 0;
+	left: 50px;
+	top: 100px;
+}
+.img2{
+	position: absolute;
+	opacity: 0;
+	left: 50px;
+	top: 350px;
+}
+.img3{
+	position: absolute;
+	opacity: 0;
+	left: 250px;
+	top: 350px;
+}
+.img4{
+	position: absolute;
+	opacity: 0;
+	right: 50px;
+	top: 100px;
+}
+.img5{
+	position: absolute;
+	opacity: 0;
+	right: 50px;
+	top: 350px;
+}
+.img6{
+	position: absolute;
+	opacity: 0;
+	right: 250px;
+	top: 350px;
+}
+
+@media screen and (max-width:960px){
+	.h1{
+		width: 200px;
+		height: 200px;
+	}
+}
+</style>
+	<script type="text/javascript">
+		function loadApp() {
+			// Create the flipbook
+			$('.flipbook').turn({
+				// Width
+				width:922,
+				// Height
+				height:600,
+				// Elevation
+				elevation: 50,
+				// Enable gradients
+				gradients: true,
+				// Auto center this flipbook
+				autoCenter: true
+			});
+		}
+		yepnope({
+			test : Modernizr.csstransforms,
+			yep: ['js/turn.js'],
+			nope: ['js/turn.html4.min.js'],
+			both: ['css/basic.css'],
+			complete: loadApp
+		});
+	</script>
+	<script>
+$(function(){
+		function dongqq(){
+			$(".a1").find("img").css({"transform":  "translate(0) rotate(0)"})
+				$(".img1").animate({opacity:1,left:60},400,function(){
+					$(".img2").animate({opacity:1,left:30},400,function(){
+						$(".img3").animate({opacity:1,left:280},400,function(){
+							$(".img4").animate({opacity:1,right:60},700,function(){
+								$(".img5").animate({opacity:1,right:30},900,function(){
+									$(".img6").animate({opacity:1,right:280},1100)
+								});
+							});
+						});
+					});
+				});
+		}
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu',
+		afterLoad:function(anchorLink ,index){
+			if(index==3){
+				dongqq()
+			}
+		},
+		controlArrowColor:'blue'
+	});
+});
+</script>
+</head>
+<body>
+<ul id="menu">
+	<li data-menuanchor="page1"><a href="#page1">基本信息</a></li>
+	<li data-menuanchor="page2"><a href="#page2">it技能</a></li>
+	<li data-menuanchor="page3"><a href="#page3">c33动画</a></li>
+	<li data-menuanchor="page4"><a href="#page4">swiper</a></li>
+	<li data-menuanchor=""><a href='味多美/味多美.html'>项目一</a></li>
+	<li data-menuanchor=""><a href='京东/京东.html'>项目二</a></li>
+</ul>
+<div id="dowebok">
+	<div class="section">
+		<div class="middbox">
+			<div class="mainbox">
+				<img src="images/014.jpg" alt=""><br/><br/>
+				<div>姓名:陈强</div>
+				<div>年龄:22&nbsp;专业:信息管理(计算机)</div>
+				<div>电话:15811501684</div>
+				<div>毕业院校:北京物资学院</div>
+				<div>邮箱:CQ__66@163.com</div>
+				<div>学历:本科</div>
+				<div>住址:北京市门头沟区</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div style="position: relative" class="slide"><div style="position: absolute;left: 0;top: 0" class="flipbook-viewport">
+			<div class="container">
+				<div class="flipbook">
+					<div class="title"><p>我的主要技能</p>
+						<img class="title_img" src="images/bjwz.jpg" alt="" />
+					</div>
+					<div><br/><br/>
+						<p>学校专业课：</p><br/><br/>
+						<p>大一：java基础知识的学习，对if语句，for循环有着基本的理解。可以写出一些小的程序，水仙花数，猜拳游戏等。
+						</p><br/><br/>
+						<p>
+							大二：数据库系统概论，了解sqlsever，会创建表，配置环境，会写简单的sql语句。
+						</p><br/><br/>
+						<p>
+							大三：一学期的H5，css，js学习，会写出常见的主流页面布局，会写常见的js效果，轮播图，table切换等。
+						</p>
+					</div>
+					<div><br/><br/>
+						<p>自学技能：</p><br/><br/>
+						<p>ps：自学ps，会使用ps制作常见的图标，卡通人物，切图，抠图，美化
+							制作简单的gif图等。
+						</p><br/><br/>
+						<p>
+							pr:自学pr，会使用pr进行视频的剪辑，添加过场动画，添加配音字幕等操作。
+						</p>
+					</div>
+					<div style=""><br/><br/>
+						<p>校内经历：</p><br/><br/>
+						<p>2013.10：参与、协助并组织信息科技月计算机组装大赛
+						</p><br/><br/>
+						<p>
+							2013.11:参与新生风采班级展示活动，道具组成员为班级活动提供道具支持。
+						</p><br/><br/>
+						<p>
+							2015.10：兴顺小学爱心超市、益跑会、温暖衣冬、拔河比赛等活动。
+						</p>
+						<p><br/><br/>
+							2015.11-12：经常和同学探讨课程问题，表达自己的看法。用csharp编写"餐厅点餐系统"。
+						</p>
+					</div>
+					<div style=""><br/><br/>
+						<p>校外实习、兼职：</p><br/><br/>
+						<p>2013.11：参观元原工厂生产线，观看牛奶生产过程讲解介绍，体验企业氛围。
+						</p><br/><br/>
+						<p>
+							2014.5:北京培智小学看望智障儿童志愿活动。
+						</p><br/><br/>
+						<p>
+							2016.11-12：北京市磁器口迪信通店手机促销兼职。
+						</p>
+						<p><br/><br/>
+							2017.4-2017.6：宜信普诚信用管理(北京)有限公司系统管理专员。
+						</p>
+					</div>
+					<div><br/><br/>
+						<p>其他技能：</p><br/><br/>
+						<p>1、熟练掌握并运用Word、Excel、ppt的使用。
+						</p><br/><br/>
+						<p>
+							2、在校学习过spss统计软件的使用及相关知识的学习，能够对一些数据进行基本的分析。
+						</p><br/><br/>
+						<p>
+							3、学习过csharp、java、.net、html5、css3、javascript，会写简单的sql语句。
+						</p>
+						<p><br/><br/>
+							4、了解ajax，json。熟悉jquery框架。熟悉rem布局，媒体查询。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div></div>
+		<div class="slide">
+			<div class="wholebd">
+				<div class="navTop">
+					<div class="navMid_clearfix">
+						<a href=""><img src="images/logo108x35_share.png" alt=""></a>
+						<div class="cirlebox"><span class="cirle"></span></div><div style="width: 63px" class="cirle_text"><h2 class="htitle">动漫</h2></div>
+						<div class="date-widge"><div class="a1"><div style="color: white" class="fa fa-th-large"></div><div style="display: inline-block;color: white;margin-left: 2px;opacity: 0.5">
+							<a style="color: white" href="">导航</a></div><span class="sanjiao" id="sanjiao1"></span></div></div>
+						<input class="navTest" type="text" placeholder="炮神"><input class="navTestr" type="button" value="搜索">
+						<ul class="ul0">
+							<li style="border-right: 1px solid #e5e5e5;width: 34px">登录</li>
+							<li><a href="" style="list-style: none">注册</a></li>
+							<li><a href="">开通MVP</a></li>
+							<li><a href="">上传</a><span class="sanjiao"></span></li>
+							<li><a href="">消息</a><span class="sanjiao"></span></li>
+							<li><a href="">播放记录</a><span class="sanjiao"></span></li>
+						</ul>
+						<ul class="navMid_hiddenfix">
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>娱乐</li>
+									<li>体育</li>
+									<li>资讯</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="focus">
+					<img class="focus_wraper">
+					<div class="focus_list">
+						<img style="display:block;opacity:1" src="images/5c79d6ccc40e4dd4afb5cae165c4bba6.jpg" alt="">
+						<img src="images/5f10bb518d3842fbba2b9f6520116e2d.jpg" alt="">
+						<img src="images/06c081025f3d4574b92ee5ae56281050.jpg" alt="">
+						<img src="images/9d026785391c452996dfba0af75b04a4.jpg" alt="">
+						<img src="images/7a597c42661e4ef6b4dd22126717d098.jpg" alt="">
+						<img src="images/7a315643ad83425c898e0e0192cd514f.jpg" alt="">
+						<img src="images/7ba1ebf84fc742f88ca3a7b05c8f4403.jpg" alt="">
+					</div>
+					<div class="focus_open">
+						<img src="images/5c79d6ccc40e4dd4afb5cae165c4bba6.jpg" alt="">
+						<img class="item" src="images/5f10bb518d3842fbba2b9f6520116e2d.jpg" alt="">
+						<img class="item" src="images/06c081025f3d4574b92ee5ae56281050.jpg" alt="">
+						<img class="item" src="images/9d026785391c452996dfba0af75b04a4.jpg" alt="">
+						<img class="item" src="images/7a597c42661e4ef6b4dd22126717d098.jpg" alt="">
+						<img class="item" src="images/7a315643ad83425c898e0e0192cd514f.jpg" alt="">
+						<img class="item" src="images/7ba1ebf84fc742f88ca3a7b05c8f4403.jpg" alt="">
+					</div>
+					<div class="naVsecod">
+						<div style="width: 56px;height: 20px;margin-left: 10px"><a ><span style="color: #82d900;font-size: 14px">动漫频道</span></a></div>
+						<div style="width: 172px;"><a href=""><span>2016爱奇艺游戏动漫嘉年华</span></a></div>
+						<div style="width: 112px;"><a href=""><span>樱桃小丸子大电影</span></a></div>
+						<div style="width: 116px;"><a href=""><span>2016夏季新番专题</span></a></div>
+						<div style="width: 56px;"><a href=""><span>新番专区</span></a></div>
+						<div style="width: 56px;"><a href=""><span>原创动漫</span></a></div>
+						<div style="width: 56px;"><a href=""><span>少儿动漫</span></a></div>
+						<div class="rtio">
+							<div style="width: 70px;"><a href=""><span>动漫风云榜</span></a></div>
+							<div style="width: 56px;"><a href=""><span>最近更新</span></a></div>
+							<div style="width: 56px;"><a href=""><span>动漫达人</span></a></div>
+							<div style="width: 28px;"><a href=""><span>专题</span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="allbox">
+				<div class="headerbox">
+					<ul class="ulbox">
+						<li style="background: url(images/9.jpg)no-repeat center"></li>
+						<li style="background: url(images/333.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/0.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/6.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/2.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/23.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/7.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/8.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/138232527.jpg)no-repeat center;display: none"></li>
+						<li style="background: url(images/1.jpg)no-repeat center;display: none"></li>
+					</ul>
+					<ul class="navright">
+						<li>王菲发布会：今晚8点独家直播</li>
+						<li>封神传奇： 范爷舔脸李连杰好魅惑</li>
+						<li>麻雀： 李易峰街头遇袭险丧命</li>
+						<li>青云志： 飙泪！碧瑶遭囚禁虐打</li>
+						<li>新歌声： 那英战队残酷开赛！</li>
+						<li>芭莎慈善夜： 邓超黄晓明黄渤来袭</li>
+						<li>哆啦A梦： 蓝胖子泪眼汪汪超级萌</li>
+						<li>全职法师： 高中生魔法师拯救世界</li>
+						<li>中国式关系： 马伊琍陈建斌斗法</li>
+						<li>成长•不怕黑： 梁朝伟隔空抱周迅</li>
+					</ul>
+					<div style="z-index: 99999" class="navtop">
+						<img class="log_1" src="images/logo_white.svg" style="opacity: 1;z-index: 99999999" alt="">
+					</div>
+					<ul style="z-index: 99999" class="navttop">
+						<li>电视剧</li>
+						<li>综艺</li>
+						<li>电影</li>
+						<li>VIP影院</li>
+						<li>动漫</li>
+						<li>少儿</li>
+						<li>娱乐</li>
+						<li>音乐</li>
+						<li>演唱会</li>
+						<li>美剧</li>
+						<li>韩剧</li>
+						<li>纪录片</li>
+						<li>微电影</li>
+						<li>新闻</li>
+						<li>体育</li>
+						<li>NBA</li>
+						<li>搞笑</li>
+						<li>游戏</li>
+						<li>原创</li>
+						<li>时尚</li>
+						<li>生活</li>
+						<li>拍客</li>
+						<li>汽车</li>
+						<li></li>
+						<li>应用下载</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div style="background: black" class="section">
+		<div class="w" style="width: 100%; position: absolute;mix-blend-mode: screen;cursor: pointer; z-index:100;background: black;"></div>
+		<div class="falling-leaves" style=""></div>
+		<div class="a1">
+			<img src="images/shield_1_01.png">
+			<img src="images/shield_1_02.png">
+			<img src="images/shield_1_03.png">
+			<img src="images/shield_1_04.png">
+			<img src="images/shield_1_05.png">
+			<img src="images/shield_1_06.png">
+			<img src="images/shield_1_07.png">
+			<img src="images/shield_1_08.png">
+			<img src="images/shield_1_09.png">
+		</div>
+		<img class="img1 h1" src="images/霹雳火.png" alt="">
+		<img class="img2 h1" src="images/急先锋.png" alt="">
+		<img class="img3 h1" src="images/力霸天.png" alt="">
+		<img class="img4 h1" src="images/冲击波.png" alt="">
+		<img class="img5 h1" src="images/龙卷风.png" alt="">
+		<img class="img6 h1" src="images/超音速.png" alt="">
+	</div>
+	<div class="section">
+		<div class="main_box">
+			<div class="center_box">
+				<div class="swiper-container xg">
+					<div class="swiper-wrapper">
+						<div style="background: url(images/00.jpg)" class="swiper-slide gh1"></div>
+						<div style="background: url(images/01.jpg)" class="swiper-slide gh1"></div>
+						<div style="background: url(images/02.jpg)" class="swiper-slide gh1"></div>
+						<div style="background: url(images/03.jpg)" class="swiper-slide gh1"></div>
+						<div style="background: url(images/04.jpg)center" class="swiper-slide gh1"></div>
+						<div style="background: url(images/05.jpg)center" class="swiper-slide gh1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script language="javascript">
+	var mySwiper = new Swiper('.swiper-container',{
+		effect : 'coverflow',
+		slidesPerView: 3,
+		centeredSlides: true,
+		coverflow: {
+			rotate: 30,
+			stretch: 10,
+			depth: 60,
+			modifier: 2,
+			slideShadows : true
+		}
+	})
+</script>
+<script>
+	$(function(){
+		var a=0;
+		$(".navright li").hover(function(){
+			clearInterval(id);
+			var index=$(this).index();
+			var a=this.index;
+			$(".ulbox li").eq(index).css({display:"block"}).siblings().css({display:"none"})
+			$(".navright li").eq(index).css({background:"#ff920b",color:"white"}).siblings().css({background:"white",color:"black"});
+		},function(){
+			if(!id){
+				setInterval(id);
+			}
+		});
+		var id=setInterval(function(){
+			a++;
+			if(a==8){
+				a=0
+			}
+			$(".ulbox li").eq(a).css({display:"block"}).siblings().css({display:"none"});
+			$(".navright li").eq(a).css({background:"#ff920b",color:"white"}).siblings().css({background:"white",color:"black"});
+		},3000)
+	})
+</script>
+</html>

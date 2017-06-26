@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.wholebd{
+    height: 2000px;
+    width: 100%;
+}
+.navTop{
+    width: 100%;
+    height: 45px;
+    position: relative;
+    background: #292929;
+}
+.navTop .navMid_clearfix{
+    width: 1180px;
+    height: 45px;
+    margin: 0 auto;
+}
+.navMid_clearfix div{
+    display: inline-block;
+}
+.navTop .navMid_clearfix .cirle{
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: 16px;
+    background: #739d24;
+}
+.navTop .navMid_clearfix .cirle_text{
+    color:#739d24;
+}
+.cirlebox,.cirle_text{
+    position: relative;
+    height: 38px;
+    line-height: 38px;
+}
+.htitle{
+    position: absolute;
+    font-size: 18px;
+    left: 12px;
+    top: 0;
+}
+.date-widge{
+    width: 87px;
+    height: 33px;
+}
+.fa-book{
+   font-size: 20px;
+    color: white;
+}
+.navTest{
+    text-indent: 1em;
+    width: 370px;
+    height: 26px;
+    position: absolute;
+    left: 463px;
+    top: 8px;
+}
+.navTestr{
+    width: 76px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    position: absolute;
+    -webkit-appearance: button;
+    border-radius: 0 2px 2px 0;
+    border: 0;
+    left: 837px;
+    top: 8px;
+    color: white;
+    cursor: pointer;
+    background: #76B200;
+}
+.sanjiao{
+    margin-left: 3px;
+    border-top: 6px solid white;
+    border-bottom: 0 none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    cursor: pointer;
+}
+.ul0 {
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    top: 15px;
+}
+.ul0 li{
+    float: left;
+    margin-right: 9px;
+    color: #e5e5e5;
+    font-size: 14px;
+    zoom: normal;
+    word-spacing: 2px;
+    font-weight:600;
+}
+.ul0 li a{
+    color: #e5e5e5;
+}
+.ul0 span{
+    display: inline-block;
+}
+.fa-th-large{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.a1{
+    position: absolute;
+    left: 300px;
+    top: 12px;
+}
+#sanjiao1{
+    position: absolute;
+    left:48px;
+    top: 7px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.focus_wraper{
+    width: 100%;
+    height: 460px;
+    background: url(../images/b76c58a510134f80a169891f64a802d1.jpg)center;
+}
+.navMid_hiddenfix{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top:45px;
+    width: 1180px;
+    height: 115px;
+    left: 85px;
+    z-index: 99999;
+}
+.navMid_hiddenfix li{
+    float: left;
+    width: 131px;
+    height: 38px;
+}
+.navMid_hiddenfix li ul li{
+    width: 131px;
+    height: 39px;
+    text-align: center;
+    line-height: 39px;
+}
+.focus{
+    width: 100%;
+    height: 460px;
+    position: relative;
+}
+.focus_list{
+    position: absolute;
+    top: 59px;
+    left: 260px;
+}
+.focus_list img{
+    display: none;
+    width: 830px;
+    height: 320px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.focus_open{
+    position: absolute;
+    top: 391px;
+    left: 261px;
+    height: 65px;
+    width: 830px;
+}
+.focus_open img{
+    float: left;
+    width: 110px;
+    height: 65px;
+}
+.item{
+    margin-left: 10px;
+}
+.naVsecod{
+    position: absolute;
+    top: 10px;
+    left: 84px;
+    height: 34px;
+    width: 1180px;
+    background:#4C4C4C;
+}
+.naVsecod div{
+    height: 20px;
+    display: inline-block;
+}
+.naVsecod div a span{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 34px;
+    display: inline-block;
+}
+.naVsecod div{
+    margin-left: 15px;
+}
+.rtio{
+    float: right;
+    margin-right: 8px;
+}
